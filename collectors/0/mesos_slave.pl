@@ -53,7 +53,7 @@ while (1){
              foreach my $k (keys %{$cgroup_files}) {
                   my $tmp = $cgroup_files->{$k};
                   foreach my $kk (keys %{$tmp}) {
-                      open(FH, $scalar_mesos_state->{flags}->{cgroups_hierarchy} . "/$k/" . $scalar_mesos_state->{flags}->{cgroups_root}. "/" . $t->{'container'} . "/$kk");
+                      next unless open(FH, $scalar_mesos_state->{flags}->{cgroups_hierarchy} . "/$k/" . $scalar_mesos_state->{flags}->{cgroups_root}. "/" . $t->{'container'} . "/$kk");
                       if ($tmp->{$kk} == "0") {
                           my $v = <FH>;
                           chomp($v);
