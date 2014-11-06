@@ -2,13 +2,18 @@ tcollector-stuff
 ================
 
 Custom collectors for OpenTSDB
-Installation (not yet)
+Installation (required GNU make - WARNING crappy Makefile)
 ------
 ```sh
 mkdir ~/tmp/dist && ~/tmp/dist
 git clone https://github.com/sheepkiller/tcollectors-stuff.git
 cd tcollectors-stuff
-make 
+# to install mesos slave collector
+make -e COLLECTORS_DIR=~/tmp mesos_slave
+# to install all mesos collectors
+make -e COLLECTORS_DIR=~/tmp mesos
+# to install all collectors
+make -e COLLECTORS_DIR=~/tmp 
 
 ```
 
