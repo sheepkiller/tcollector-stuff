@@ -17,7 +17,8 @@ Mesos [perl]
 module dependencies
 * libwww-perl (LWP::Simple)
 * JSON
-per default, these collectors grabs metric on localhost:5050 for master and localhost:5051 for slave
+
+Per default, these collectors grabs metric on localhost:5050 for master and localhost:5051 for slave
 You can change thoses values directly in perl script (*mesos_master.pl* and *mesos_slave.pl*)
 
 
