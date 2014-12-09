@@ -25,4 +25,9 @@ module dependencies
 
 Per default, these collectors grab metrics via http://localhost:5050 for master and http://localhost:5051 for slave.
 You can change those values directly in perl scripts (*mesos_master.pl* and *mesos_slave.pl*).
-
+5 tags max, to support host,rackid,dc.
+Metrics
+* master/slave snapshot
+* on slave: container statitics + cgroup if available (mesos + docker)
+* framework name resolution (Not tested on large cluster)
+* dynamically tag marathon apps/groups ("/play" gives "marathon_app=play", and /presto/meta/discovery gives "marathn_group=presto" and "marathon_app=meta_discovery")
