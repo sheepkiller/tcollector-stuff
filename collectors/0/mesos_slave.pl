@@ -14,7 +14,7 @@ my $DOCKER="docker";
 # 1: read metric names from file
 # 0: filename is metric name
 my $cgroup_files = {};
-$cgroup_files->{'cpuacct'}->{'cpuacct.stat'}=0;
+$cgroup_files->{'cpuacct'}->{'cpuacct.stat'}=1;
 $cgroup_files->{'cpu'}->{'cpu.stat'}=1;
 $cgroup_files->{'memory'}->{'memory.memsw.failcnt'}=0;
 $cgroup_files->{'memory'}->{'memory.stat'}=1;
